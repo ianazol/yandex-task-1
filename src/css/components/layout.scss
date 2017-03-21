@@ -1,0 +1,44 @@
+body {
+  width: 100%;
+  min-width: 320px;
+  background: #eeeeee;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.row {
+  display: flex;
+  margin: 0 -10px;
+
+  @media #{$md} {
+    flex-wrap: wrap;
+  }
+}
+
+.col {
+  padding: 0 10px;
+}
+
+.sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  flex-grow: 0;
+
+  @media #{$md} {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+}

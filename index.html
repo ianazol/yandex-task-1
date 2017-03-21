@@ -1,12 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="build/css/main.css">
     <title>Расписание</title>
 </head>
 <body>
-
+<div class="hidden svg-lib"></div>
+<div class="container">
+    <h1>Расписание лекций проекта «Мобилизация»</h1>
+    <div class="row">
+        <div class="col sidebar">
+            <div class="filter">
+                <div class="filter__content">
+                    <div class="filter__item">
+                        <label class="filter__label" for="date">Дата</label>
+                        <div class="textfield">
+                            <input type="text" name="date" id="date" class="textfield__control filter__control" />
+                            <span class="textfield__icon textfield__icon_calendar">
+                                <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use></svg>
+                            </span>
+                            <span class="textfield__icon textfield__icon_clear textfield__icon_hidden">
+                                <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#clear"></use></svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="filter__item">
+                        <label class="filter__label" for="school">Школа</label>
+                        <div class="dropdown">
+                            <select name="school" id="school" class="dropdown__control filter__control">
+                                <option value="">Все школы</option>
+                                <option value="school-0">Школа разработки интерфейсов</option>
+                                <option value="school-1">Школа мобильной разработки</option>
+                                <option value="school-2">Школа мобильного дизайна</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter__item">
+                        <label class="filter__label" for="lecturer">Лектор</label>
+                        <div class="dropdown">
+                            <select name="lecturer" id="lecturer" class="dropdown__control filter__control">
+                                <option value="">Все лекторы</option>
+                                <option value="lecturer-0">Дмитрий Душкин</option>
+                                <option value="lecturer-1">Максим Васильев</option>
+                                <option value="lecturer-2">Эдуард Мацуков</option>
+                                <option value="lecturer-3">Дмитрий Складнов</option>
+                                <option value="lecturer-4">Антон Тен</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col schedule"></div>
+    </div>
+</div>
+<script src="https://yastatic.net/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+<script src="build/js/templates.js"></script>
+<script src="build/js/svg.js"></script>
+<script src="build/js/main.js"></script>
 </body>
 </html>

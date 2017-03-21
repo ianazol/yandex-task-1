@@ -1,0 +1,48 @@
+$dropdown-arrow-width: 4;
+$dropdown-padding: 10;
+
+.dropdown {
+  position: relative;
+  background: #ffffff;
+
+  &__control {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    min-height: 30px;
+    padding: 5px #{$dropdown-padding * 2 + $dropdown-arrow-width}px 5px #{$dropdown-padding}px;
+
+    font-size: 13px;
+
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    background: transparent;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+
+    //hide native select arrow in ie
+    &::-ms-expand {
+      display: none;
+    }
+
+    &:focus {
+      border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    right: #{$dropdown-padding}px;
+    z-index: 1;
+
+    display: block;
+    margin: -#{$dropdown-arrow-width / 2}px 0 0 0;
+    content: "";
+
+    border: #{$dropdown-arrow-width}px solid transparent;
+    border-top-color: black;
+  }
+}

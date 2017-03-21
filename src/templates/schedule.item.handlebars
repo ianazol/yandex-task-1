@@ -1,0 +1,39 @@
+{{#each items}}
+<div class="schedule-item{{#if completed}} schedule-item_completed{{/if}}">
+    <div class="schedule-item__wrap">
+        <h2 class="schedule-item__title">{{title}}</h2>
+        <span class="schedule-item__date">{{date}} ({{time}})</span>
+        <ul class="schedule-item__info">
+            <li>
+                <span class="schedule-item__info-title">Место:</span>
+                {{place}}
+            </li>
+            <li>
+                <span class="schedule-item__info-title">Лектор:</span>
+                <span class="schedule-item__lecturer">{{lecturer.name}}</span>
+                <div class="schedule-lecturer">
+                    <div class="schedule-lecturer__wrap">
+                        <div class="schedule-lecturer__photo">
+                            <img src="{{lecturer.photo.1x}}" srcset="{{lecturer.photo.2x}} 2x" alt="{{lecturer.name}}" />
+                        </div>
+                        <div class="schedule-lecturer__text">
+                            {{lecturer.description}}
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span class="schedule-item__info-title">Школа:</span>
+                {{schoolList}}
+            </li>
+        </ul>
+        {{#if links.length}}
+        <div class="schedule-item__materials">
+            {{#each links}}
+                <a class="btn" href="{{link}}">{{name}}</a>
+            {{/each}}
+        </div>
+        {{/if}}
+    </div>
+</div>
+{{/each}}

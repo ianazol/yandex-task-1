@@ -1,0 +1,54 @@
+.filter {
+  padding: 20px;
+
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  @media #{$md} {
+    margin: 0 0 20px;
+  }
+
+  @media #{$md-up} {
+    &.sticky {
+      position: fixed;
+      width: 220px;
+      top: 20px;
+    }
+  }
+
+  &__content{
+    @media #{$md} {
+      display: flex;
+      margin: 0 -10px;
+    }
+
+    @media #{$xs} {
+      flex-wrap: wrap;
+      margin: 0;
+    }
+  }
+
+  &__item {
+    margin: 0 0 20px 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media #{$md} {
+      width: 33.3333%;
+      margin: 0 5px;
+    }
+
+    @media #{$xs} {
+      width: 100%;
+      margin: 0 0 20px;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    margin: 0 0 5px;
+  }
+}
