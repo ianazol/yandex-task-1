@@ -9,8 +9,8 @@ let SCHEDULE_DATA = [
             name: "Дмитрий Душкин",
             description: "Кандидат технических наук, научный сотрудник ИПУ РАН с 2008 по 2013. Пришёл в Яндекс.Картинки в 2014 году, отвечал за мобильную версию и рост производительности сервиса. В 2016 перешёл в Yandex Data Factory, где разрабатывает интерфейсы и дизайн веб-приложений для B2B.",
             photo: {
-                '1x': '/images/lecturer-0-1x.jpg',
-                '2x': '/images/lecturer-0-2x.jpg'
+                '1x': 'images/lecturer-0-1x.jpg',
+                '2x': 'images/lecturer-0-2x.jpg'
             }
         },
         school: [{
@@ -38,8 +38,8 @@ let SCHEDULE_DATA = [
             name: "Антон Тен",
             description: "В Яндексе с 2014 года. Ведущий дизайнер продукта в сервисах Переводчик, Расписания и Видео.",
             photo: {
-                '1x': '/images/lecturer-4-1x.jpg',
-                '2x': '/images/lecturer-4-2x.jpg'
+                '1x': 'images/lecturer-4-1x.jpg',
+                '2x': 'images/lecturer-4-2x.jpg'
             }
         },
         school: [{
@@ -67,8 +67,8 @@ let SCHEDULE_DATA = [
             name: "Дмитрий Душкин",
             description: "Кандидат технических наук, научный сотрудник ИПУ РАН с 2008 по 2013. Пришёл в Яндекс.Картинки в 2014 году, отвечал за мобильную версию и рост производительности сервиса. В 2016 перешёл в Yandex Data Factory, где разрабатывает интерфейсы и дизайн веб-приложений для B2B.",
             photo: {
-                '1x': '/images/lecturer-0-1x.jpg',
-                '2x': '/images/lecturer-0-2x.jpg'
+                '1x': 'images/lecturer-0-1x.jpg',
+                '2x': 'images/lecturer-0-2x.jpg'
             }
         },
         school: [
@@ -101,8 +101,8 @@ let SCHEDULE_DATA = [
             name: "Эдуард Мацуков",
             description: "Разрабатываю приложения для Android с 2010 года. В 2014 делал высоконагруженное финансовое приложение. Тогда же начал осваивать АОП, внедряя язык в продакшн. В 2015 разрабатывал инструменты для Android Studio, позволяющие использовать aspectJ в своих проектах. В Яндексе занят на проекте Авто.ру.",
             photo: {
-                '1x': '/images/lecturer-2-1x.jpg',
-                '2x': '/images/lecturer-2-2x.jpg'
+                '1x': 'images/lecturer-2-1x.jpg',
+                '2x': 'images/lecturer-2-2x.jpg'
             }
         },
         school: [{
@@ -121,8 +121,8 @@ let SCHEDULE_DATA = [
             name: "Антон Тен",
             description: "В Яндексе с 2014 года. Ведущий дизайнер продукта в сервисах Переводчик, Расписания и Видео.",
             photo: {
-                '1x': '/images/lecturer-4-1x.jpg',
-                '2x': '/images/lecturer-4-2x.jpg'
+                '1x': 'images/lecturer-4-1x.jpg',
+                '2x': 'images/lecturer-4-2x.jpg'
             }
         },
         school: [{
@@ -141,8 +141,8 @@ let SCHEDULE_DATA = [
             name: "Максим Васильев",
             description: "Во фронтенд-разработке с 2007 года. До 2013-го, когда пришёл в Яндекс, работал технологом в студии Лебедева и других компаниях.",
             photo: {
-                '1x': '/images/lecturer-1-1x.jpg',
-                '2x': '/images/lecturer-1-2x.jpg'
+                '1x': 'images/lecturer-1-1x.jpg',
+                '2x': 'images/lecturer-1-2x.jpg'
             }
         },
         school: [{
@@ -161,8 +161,8 @@ let SCHEDULE_DATA = [
             name: "Дмитрий Складнов",
             description: "Окончил факультет ИТ Московского Технического Университета. В Яндексе с 2015 года, разрабатывает приложение Auto.ru для Android.",
             photo: {
-                '1x': '/images/lecturer-3-1x.jpg',
-                '2x': '/images/lecturer-3-2x.jpg'
+                '1x': 'images/lecturer-3-1x.jpg',
+                '2x': 'images/lecturer-3-2x.jpg'
             }
         },
         school: [
@@ -190,8 +190,8 @@ let SCHEDULE_DATA = [
             name: "Эдуард Мацуков",
             description: "Разрабатываю приложения для Android с 2010 года. В 2014 делал высоконагруженное финансовое приложение. Тогда же начал осваивать АОП, внедряя язык в продакшн. В 2015 разрабатывал инструменты для Android Studio, позволяющие использовать aspectJ в своих проектах. В Яндексе занят на проекте Авто.ру.",
             photo: {
-                '1x': '/images/lecturer-2-1x.jpg',
-                '2x': '/images/lecturer-2-2x.jpg'
+                '1x': 'images/lecturer-2-1x.jpg',
+                '2x': 'images/lecturer-2-2x.jpg'
             }
         },
         school: [{
@@ -210,8 +210,8 @@ let SCHEDULE_DATA = [
             name: "Антон Тен",
             description: "В Яндексе с 2014 года. Ведущий дизайнер продукта в сервисах Переводчик, Расписания и Видео.",
             photo: {
-                '1x': '/images/lecturer-4-1x.jpg',
-                '2x': '/images/lecturer-4-2x.jpg'
+                '1x': 'images/lecturer-4-1x.jpg',
+                '2x': 'images/lecturer-4-2x.jpg'
             }
         },
         school: [
