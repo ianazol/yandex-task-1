@@ -8,7 +8,8 @@ function leadZero(num) {
 }
 
 function getTime(date) {
-    return leadZero(date.getUTCHours()) + ":" + leadZero(date.getUTCMinutes());
+    date.setHours(date.getHours(), date.getMinutes() + date.getTimezoneOffset());
+    return leadZero(date.getHours()) + ":" + leadZero(date.getMinutes());
 }
 
 function formatDate(date) {

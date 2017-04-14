@@ -8,7 +8,7 @@ function filterChangeHandler() {
         lecturer: document.querySelector(".filter select[name=lecturer]").value,
         date: document.querySelector(".filter input[name=date]").value
     };
-    schedule.filterItems(filterValues);
+    schedule.filterLectures(filterValues);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -24,6 +24,4 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll(".filter__control"),
         element => element.addEventListener("change", filterChangeHandler)
     );
-
-    document.querySelector(".svg-lib").innerHTML = SVG_SPRITE;
 });

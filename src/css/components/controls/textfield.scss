@@ -3,7 +3,7 @@
 
   &__control {
     width: 100%;
-    min-height: 30px;
+    height: 30px;
     padding: 5px 10px;
     box-sizing: border-box;
 
@@ -25,18 +25,14 @@
     display: block;
     cursor: pointer;
 
-    svg {
-      fill: #cccccc;
-      width: 100%;
-      height: 100%;
-    }
-
     &_calendar {
       top: 5px;
       right: 5px;
 
       width: 20px;
       height: 20px;
+
+      background: url("../../images/svg/calendar.svg");
     }
 
     &_clear {
@@ -45,6 +41,8 @@
 
       width: 15px;
       height: 15px;
+
+      background: url("../../images/svg/clear.svg");
     }
 
     &_hidden {
