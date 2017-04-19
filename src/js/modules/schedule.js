@@ -37,33 +37,32 @@ function render(lectures) {
 function filterLectures(filterValues) {
     let filteredLecture = [];
 
-    filterValues.date = filterValues.date ? dateUtils.formatDate(new Date(filterValues.date)) : false;
+    if (filterValues.date.match(/^(\d{2})\.(\d{2})\.(\d{4})$/) === null) {
+        filterValues.date = filterValues.date ? dateUtils.formatDate(new Date(filterValues.date)) : false;
+    }
 
     lectures.forEach(function (item) {
         let lecture = $.extend(true, {}, item),
             valid = true;
 
-        for (let key in filterValues) {
-            if (filterValues.hasOwnProperty(key) && filterValues[key]) {
-                switch (key) {
-                    case "date":
-                        if (filterValues["date"] !== lecture.date) {
-                            valid = false;
-                        }
-                        break;
-                    case "school":
-                        let result = lecture["school"].every((school) => school.id !== filterValues["school"]);
-                        if (result === true) {
-                            valid = false;
-                        }
-                        break;
-                    case "lecturer":
-                        if (lecture["lecturer"].id !== filterValues["lecturer"]) {
-                            valid = false;
-                        }
-                }
+        //фильтрация по дате
+        if (filterValues.date && filterValues.date !== lecture.date) {
+            valid = false;
+        }
+
+        //фильтрация по школе
+        if (filterValues.school) {
+            let result = lecture["school"].every((school) => school.id !== filterValues.school);
+            if (result === true) {
+                valid = false;
             }
         }
+
+        //фильтрация по лектору
+        if (filterValues.lecturer && lecture["lecturer"].id !== filterValues.lecturer) {
+            valid = false;
+        }
+
         if (valid) {
             filteredLecture.push(lecture);
         }
