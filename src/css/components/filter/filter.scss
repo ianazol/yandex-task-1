@@ -10,10 +10,14 @@
   }
 
   @media #{$md-up} {
+    position: sticky;
+    top: 20px;
+
     &.sticky {
       position: fixed;
-      width: 220px;
       top: 20px;
+
+      width: 220px;
     }
   }
 

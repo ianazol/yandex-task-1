@@ -1,6 +1,7 @@
 import DatePicker from './modules/DatePicker';
 import schedule from './modules/schedule';
 import Sticky from './modules/sticky';
+import support from './modules/support';
 
 function filterChangeHandler() {
     let filterValues = {
@@ -12,8 +13,10 @@ function filterChangeHandler() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    let stickyFilter = new Sticky(document.querySelector(".filter"));
-    stickyFilter.init();
+    if (!support.stickySupported()) {
+        let stickyFilter = new Sticky(document.querySelector(".filter"));
+        stickyFilter.init();
+    }
 
     let calendar = new DatePicker(document.querySelector(".textfield"));
     calendar.init();

@@ -5,21 +5,8 @@
 
 import ua from './ua';
 import dateUtils from './dateUtils';
+import support from './support';
 import Pikaday from './vendor/pikaday';
-
-function isNativeDateSupport() {
-    let incorrectValue = "not-a-date",
-        input = document.createElement("input");
-
-    input.setAttribute("type", "date");
-    input.value = incorrectValue;
-
-    return input.value !== incorrectValue;
-}
-
-function useNativeDatePicker() {
-    return (isNativeDateSupport() && (ua.platform.ios || ua.platform.android));
-}
 
 export default class DatePicker {
     constructor(el) {
@@ -29,8 +16,12 @@ export default class DatePicker {
         this.clearIcon = el.querySelector(".textfield__icon_clear");
     }
 
+    static useNativeDatePicker() {
+        return (support.nativeDatePickerSupported() && (ua.platform.ios || ua.platform.android));
+    }
+
     init() {
-        if (!useNativeDatePicker()) {
+        if (!DatePicker.useNativeDatePicker()) {
             this.dateControl.setAttribute("readonly", "readonly");
             this.initCustomDatePicker();
         } else {
